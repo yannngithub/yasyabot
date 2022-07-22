@@ -205,7 +205,6 @@ case 'menu': case 'help': case '?': {
 ╠ ${prefix}cekresi
 ╠ ${prefix}spamtlp
 ╠ ${prefix}spamall
-╠ ${prefix}eval
 ╚════════
   
 ╔════════
@@ -222,7 +221,6 @@ case 'menu': case 'help': case '?': {
 ╠ ${prefix}setppgrup
 ╠ ${prefix}tagall
 ╠ ${prefix}hidetag
-╠ ${prefix}ephemeral
 ╚════════
   
 ╔════════
@@ -236,8 +234,6 @@ case 'menu': case 'help': case '?': {
 ╠ ${prefix}togif
 ╠ ${prefix}tourl
 ╠ ${prefix}removebg
-╠ ${prefix}estetik
-╠ ${prefix}ktpmaker
 ╚════════
 
 ╔════════
@@ -1008,7 +1004,6 @@ case 'play':
                         m.reply(mess.wait)
                         hx.twitter(link)
                         .then(result => {
-                        console.log(result)
                         reply(mess.wait)
                         ichi.sendMessage(from,{ video: { url: `${result.HD}` }, mimetype: 'video/mp4',quoted: m})
                         })
@@ -1255,10 +1250,10 @@ case 'play':
       break
 //Eval
 default:
-            if (budy.includes(`Assalamualaikum`)) {
+            if (budy == `Assalamualaikum`) {
                   reply(`Waalaikumsalam`)
                   }
-                  if (budy.includes(`assalamualaikum`)) {
+                  if (budy == `assalamualaikum`) {
                         reply(`Waalaikumsalam`)
                         }
                         if (budy == `Bot`) {
@@ -1267,19 +1262,22 @@ default:
                               if (budy == `bot`) {
                                     reply(`Apa? mau pakai bot? caranya kirim .help`)
                                     }
+                              if (budy == `Assalamualaikum`) {
+                                    reply(`Waalaikumsalam`)
+                                    }
                                     if (budy == `P`) {
                                           reply(`Kesopanan minus( - )\n\n.help untuk melihat semua command/fitur`)
                                           }
                                           if (budy == `p`) {
                                                 reply(`Kesopanan minus( - )\n\n.help untuk melihat semua command/fitur`)
                                                 }
-                                                if (budy.includes(`Tasya`)) {
+                                                if (budy == `Tasya`) {
                                                   reply(`Apa tasya tasya? itu ayang bot, jangan diambil:(`)
                                                   }
-                                                   if (budy.includes(`tasya`)) {
+                                                   if (budy == `tasya`) {
                                                        reply(`Apa tasya tasya? itu ayang bot, jangan diambil:(`)
                                                        }
-                                            if (budy.includes(`Asu`)) {
+                                            if (budy == `Asu`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1287,7 +1285,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`asu`)) {
+                                            if (budy == `asu`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1295,15 +1293,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`asw`)) {
-                                                  buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  setTimeout( () => {
-                                                  buffer2 = fs.readFileSync(`./src/ngomongsopan.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  },7000)
-                                                  }      
-                                            if (budy.includes(`Jancok`)) {
+                                            if (budy == `Jancok`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1311,7 +1301,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`jancok`)) {
+                                            if (budy == `jancok`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1319,7 +1309,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`jnck`)) {
+                                            if (budy == `Kontol`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1327,7 +1317,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`Kontol`)) {
+                                            if (budy == `kontol`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1335,7 +1325,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`kontol`)) {
+                                            if (budy == `Memek`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1343,7 +1333,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`kntl`)) {
+                                            if (budy == `memek`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
@@ -1351,31 +1341,7 @@ default:
                                                   ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   },7000)
                                                   }
-                                            if (budy.includes(`Memek`)) {
-                                                  buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  setTimeout( () => {
-                                                  buffer2 = fs.readFileSync(`./src/ngomongsopan.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  },7000)
-                                                  }
-                                            if (budy.includes(`memek`)) {
-                                                  buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  setTimeout( () => {
-                                                  buffer2 = fs.readFileSync(`./src/ngomongsopan.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  },7000)
-                                                  }
-                                            if (budy.includes(`mmk`)) {
-                                                  buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  setTimeout( () => {
-                                                  buffer2 = fs.readFileSync(`./src/ngomongsopan.mp3`)
-                                                  ichi.sendMessage(from, { audio: buffer2, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
-                                                  },7000)
-                                                  }
-                                            if (budy.includes(`Ngontol`)) {
+                                            if (budy == `ngontol`) {
                                                   buffer = fs.readFileSync(`./src/ngomongmoral.mp3`)
                                                   ichi.sendMessage(from, { audio: buffer, ptt: true}, { mimetype: 'audio/mp3'}, {quoted: m })
                                                   setTimeout( () => {
